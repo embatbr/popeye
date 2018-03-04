@@ -1,0 +1,15 @@
+{
+  "name": "popeye-gathering",
+  "version": "0.1.0",
+  "description": "Collects data (actively of passively) from sources and deposits in a destination.",
+  "main": "main.js",
+  "scripts": {
+    "start": "bin/start.sh",
+    "test": "echo \"do proper testing\""
+  },
+  "author": {
+    "name": "Eduardo Tenório",
+    "email": "embatbr@gmail.com"
+  },
+  "license": "MIT"
+}

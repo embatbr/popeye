@@ -1,6 +1,6 @@
 # Popeye
 
-Pipeline for crypto market information gathering.
+Pipeline for crypto market information gathering and consolidation.
 
 ## General idea
 
