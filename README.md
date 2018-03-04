@@ -23,3 +23,9 @@ General points (not yet too developed) to create a roadmap in the future.
     - Learn patterns from currency's trade history;
     - Associate with news, FUD and announcements:
         - This step requires subjective textual information to be collected and quantified.
+
+## TODO
+
+- Study the following API documentations:
+    - [Binance](https://github.com/binance-exchange/binance-official-api-docs)
+    - [Kucoin](https://kucoinapidocs.docs.apiary.io/#)
