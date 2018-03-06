@@ -29,3 +29,7 @@ General points (not yet too developed) to create a roadmap in the future.
 - Study the following API documentations:
     - [Binance](https://github.com/binance-exchange/binance-official-api-docs)
     - [Kucoin](https://kucoinapidocs.docs.apiary.io/#)
+
+## Running
+
+- [0-gathering](/0-gathering)
