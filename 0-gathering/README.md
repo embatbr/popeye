@@ -2,16 +2,16 @@
 
 ## Running
 
-Install all dependencies shown in [package.json](package.json) typing
+Install all dependencies shown in [package.json](package.json):
 
 ```
 npm install
 ```
 
-and execute typing
+Execute:
 
 ```
 npm start
 ```
 
-and Voilà!
+Voilà!
