@@ -18,11 +18,15 @@ const exchanges = [
         streams: [
             {
                 name: 'trade',
-                prefix: 'ws'
+                raw: true
             }
         ],
         compose_stream: (currency, stream) => {
-            return `${stream.prefix}/${currency.symbol}@${stream.name}`
+            const stream_name = `${currency.symbol}@${stream.name}`
+
+            if(stream.raw) {
+                return `ws/${stream_name}`
+            }
         }
     }
 ];

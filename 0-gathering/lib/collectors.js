@@ -5,7 +5,7 @@
 
 // Websocket collectors
 
-const ExchangeCollector = (exchange, WebSocket) => {
+const WebSocketCollector = (exchange, WebSocket, handler) => {
     return {
         start: () => {
             console.log(exchange.name);
@@ -15,12 +15,10 @@ const ExchangeCollector = (exchange, WebSocket) => {
                     resource_path = exchange.compose_stream(currency, stream);
                     const url = `${exchange.base_endpoint}/${resource_path}`;
 
-                    console.log(url);
-
                     const ws = new WebSocket(url);
 
                     ws.on('message', (data) => {
-                        console.log(data);
+                        handler.handle_message(data)
                     });
 
                     ws.on('error', (error) => {
@@ -34,5 +32,5 @@ const ExchangeCollector = (exchange, WebSocket) => {
 
 
 module.exports = {
-    exchange_collector: ExchangeCollector
+    WebSocketCollector: WebSocketCollector
 };
