@@ -3,9 +3,12 @@
 */
 
 
+var WebSocket = require('ws')
+
+
 // Websocket collectors
 
-const WebSocketCollector = (exchange, WebSocket, handler) => {
+const WebSocketCollector = (exchange, handler) => {
     return {
         start: () => {
             console.log(exchange.name);
@@ -17,12 +20,10 @@ const WebSocketCollector = (exchange, WebSocket, handler) => {
 
                     const ws = new WebSocket(url);
 
-                    ws.on('message', (data) => {
-                        handler.handle_message(data)
-                    });
-
-                    ws.on('error', (error) => {
-                        console.log(error);
+                    ['message', 'error'].forEach((event) => {
+                        ws.on(event, (data) => {
+                            handler[`handle_${event}`](data);
+                        });
                     });
                 });
             });
