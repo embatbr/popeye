@@ -9,7 +9,7 @@ const handlers = require('./handlers.js');
 
 
 confs.exchanges.forEach((exchange) => {
-    const handler = handlers.handlers['console'](exchange);
+    const handler = handlers.handlers['http'](exchange);
 
     const collector = collectors.WebSocketCollector(exchange, handler);
     collector.start();

@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "request": "^2.85.0",
     "ws": "^4.1.0"
   }
 }
